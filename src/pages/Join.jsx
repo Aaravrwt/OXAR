@@ -9,6 +9,7 @@ export default function Join() {
     // Step 1: Personal
     email: '',
     password: '',
+    confirm_password: '',
     full_name: '',
     // Step 2: Graduation
     batch: '',
@@ -28,15 +29,55 @@ export default function Join() {
 
   const handleNext = (e) => {
     e.preventDefault()
+    setError('')
+
+    // Step 1 Validation
+    if (step === 1) {
+      if (!formData.full_name.trim()) {
+        setError('Please enter your full name.')
+        return
+      }
+      if (!formData.email.trim() || !formData.email.includes('@')) {
+        setError('Please enter a valid email address.')
+        return
+      }
+      if (!formData.password || formData.password.length < 6) {
+        setError('Password must be at least 6 characters long.')
+        return
+      }
+      if (formData.password !== formData.confirm_password) {
+        setError('Passwords do not match. Please check your confirm password.')
+        return
+      }
+    }
+
+    // Step 2 Validation
+    if (step === 2) {
+      if (!formData.batch.trim()) {
+        setError('Please enter your graduation batch.')
+        return
+      }
+      if (!formData.degree.trim()) {
+        setError('Please enter your degree earned.')
+        return
+      }
+      if (!formData.major.trim()) {
+        setError('Please enter your major / stream.')
+        return
+      }
+    }
+
     setStep(prev => prev + 1)
   }
 
   const handlePrev = (e) => {
     e.preventDefault()
+    setError('')
     setStep(prev => prev - 1)
   }
 
   const handleChange = (e) => {
+    setError('')
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
@@ -203,9 +244,21 @@ export default function Join() {
                     <input
                       type="password"
                       name="password"
-                      placeholder="••••••••"
+                      placeholder="Minimum 6 characters"
                       required
                       value={formData.password}
+                      onChange={handleChange}
+                      className="w-full border border-gray-300 bg-white text-[#07131D] placeholder:text-gray-400 font-medium rounded-lg px-3.5 py-2.5 outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-semibold text-gray-700 mb-1">Confirm Password</label>
+                    <input
+                      type="password"
+                      name="confirm_password"
+                      placeholder="Re-enter your password"
+                      required
+                      value={formData.confirm_password}
                       onChange={handleChange}
                       className="w-full border border-gray-300 bg-white text-[#07131D] placeholder:text-gray-400 font-medium rounded-lg px-3.5 py-2.5 outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                     />
