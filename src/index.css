@@ -52,3 +52,12 @@ body {
 .font-ui {
   font-family: "Times New Roman", Times, serif !important;
 }
+
+input, textarea, select {
+  color: #07131D;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #9CA3AF;
+}
+

@@ -91,19 +91,6 @@ export default function Join() {
     setUploading(false)
   }
 
-  const handleSocialLogin = async (provider) => {
-    setError('')
-    const { error: oAuthError } = await supabase.auth.signInWithOAuth({
-      provider,
-      options: {
-        redirectTo: `${window.location.origin}/join?step=2`
-      }
-    })
-    if (oAuthError) {
-      setError(oAuthError.message)
-    }
-  }
-
   const handleSubmit = async (e) => {
     e.preventDefault()
     setLoading(true)
@@ -146,8 +133,8 @@ export default function Join() {
   }
 
   return (
-    <div className="max-w-xl mx-auto py-16 px-4 sm:px-6">
-      <div className="bg-white border border-[#E0E0E0] rounded-lg shadow-sm overflow-hidden">
+    <div className="max-w-xl mx-auto py-12 sm:py-16 px-4 sm:px-6">
+      <div className="bg-white border border-[#E0E0E0] rounded-xl shadow-md overflow-hidden">
         <div className="bg-gray-50 border-b border-[#E0E0E0] px-6 py-4 flex justify-between items-center">
           <h2 className="font-heading font-bold text-lg text-primary">Join the Alumni Network</h2>
           <span className="text-xs font-semibold text-secondary">Step {step} of 3</span>
@@ -156,7 +143,7 @@ export default function Join() {
           <div className="bg-primary h-1 transition-all duration-300" style={{ width: `${(step / 3) * 100}%` }}></div>
         </div>
 
-        <form onSubmit={step === 3 ? handleSubmit : handleNext} className="p-8 space-y-6">
+        <form onSubmit={step === 3 ? handleSubmit : handleNext} className="p-6 sm:p-8 space-y-6">
           {error && (
             <div className="bg-red-50 border border-red-200 text-red-700 text-sm rounded-md p-3">
               {error}
@@ -167,13 +154,13 @@ export default function Join() {
             <div className="text-center space-y-4 py-8">
               <div className="bg-green-100 text-green-800 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto text-2xl font-bold">✓</div>
               <h3 className="font-heading font-bold text-xl text-primary">Registration Submitted!</h3>
-              <p className="font-body text-sm text-gray-500 max-w-sm mx-auto">
+              <p className="font-body text-sm text-gray-600 max-w-sm mx-auto">
                 Thank you for registering. Your details are pending approval by the OXAR Alumni association. We will notify you once approved.
               </p>
               <button
                 type="button"
                 onClick={() => navigate('/')}
-                className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-primary-dark"
+                className="inline-flex items-center px-5 py-2.5 border border-transparent text-sm font-semibold rounded-lg text-white bg-primary hover:bg-primary-dark"
               >
                 Go to Homepage
               </button>
@@ -188,60 +175,40 @@ export default function Join() {
                     <span>Personal Details</span>
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold text-gray-600 mb-1">Full Name</label>
+                    <label className="block text-xs font-semibold text-gray-700 mb-1">Full Name</label>
                     <input
                       type="text"
                       name="full_name"
+                      placeholder="Enter your full name"
                       required
                       value={formData.full_name}
                       onChange={handleChange}
-                      className="w-full border border-gray-300 rounded-md px-3 py-2 outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                      className="w-full border border-gray-300 bg-white text-[#07131D] placeholder:text-gray-400 font-medium rounded-lg px-3.5 py-2.5 outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold text-gray-600 mb-1">Email Address</label>
+                    <label className="block text-xs font-semibold text-gray-700 mb-1">Email Address</label>
                     <input
                       type="email"
                       name="email"
+                      placeholder="name@example.com"
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full border border-gray-300 rounded-md px-3 py-2 outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                      className="w-full border border-gray-300 bg-white text-[#07131D] placeholder:text-gray-400 font-medium rounded-lg px-3.5 py-2.5 outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold text-gray-600 mb-1">Password</label>
+                    <label className="block text-xs font-semibold text-gray-700 mb-1">Password</label>
                     <input
                       type="password"
                       name="password"
+                      placeholder="••••••••"
                       required
                       value={formData.password}
                       onChange={handleChange}
-                      className="w-full border border-gray-300 rounded-md px-3 py-2 outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                      className="w-full border border-gray-300 bg-white text-[#07131D] placeholder:text-gray-400 font-medium rounded-lg px-3.5 py-2.5 outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                     />
-                  </div>
-
-                  <div className="relative flex py-2 items-center">
-                    <div className="flex-grow border-t border-gray-200"></div>
-                    <span className="flex-shrink mx-4 text-gray-400 text-xxs uppercase tracking-wider">Or Sign Up With</span>
-                    <div className="flex-grow border-t border-gray-200"></div>
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-4">
-                    <button
-                      type="button"
-                      onClick={() => handleSocialLogin('google')}
-                      className="inline-flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md shadow-sm bg-white text-xs font-medium text-gray-700 hover:bg-gray-50 transition-all"
-                    >
-                      <span>Google</span>
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => handleSocialLogin('github')}
-                      className="inline-flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md shadow-sm bg-white text-xs font-medium text-gray-700 hover:bg-gray-50 transition-all"
-                    >
-                      <span>GitHub</span>
-                    </button>
                   </div>
                 </div>
               )}
@@ -253,32 +220,33 @@ export default function Join() {
                     <BookOpen className="h-5 w-5 text-secondary" />
                     <span>Graduation Details</span>
                   </div>
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-semibold text-gray-600 mb-1">Graduation Batch</label>
+                      <label className="block text-xs font-semibold text-gray-700 mb-1">Graduation Batch</label>
                       <input
                         type="text"
                         name="batch"
-                        placeholder="e.g. 2012"
+                        placeholder="e.g. 2024"
                         required
                         value={formData.batch}
                         onChange={handleChange}
-                        className="w-full border border-gray-300 rounded-md px-3 py-2 outline-none focus:ring-2 focus:ring-primary"
+                        className="w-full border border-gray-300 bg-white text-[#07131D] placeholder:text-gray-400 font-medium rounded-lg px-3.5 py-2.5 outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-semibold text-gray-600 mb-1">Student ID (Optional)</label>
+                      <label className="block text-xs font-semibold text-gray-700 mb-1">Student ID (Optional)</label>
                       <input
                         type="text"
                         name="student_id"
+                        placeholder="e.g. 10452"
                         value={formData.student_id}
                         onChange={handleChange}
-                        className="w-full border border-gray-300 rounded-md px-3 py-2 outline-none focus:ring-2 focus:ring-primary"
+                        className="w-full border border-gray-300 bg-white text-[#07131D] placeholder:text-gray-400 font-medium rounded-lg px-3.5 py-2.5 outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                       />
                     </div>
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold text-gray-600 mb-1">Degree Earned</label>
+                    <label className="block text-xs font-semibold text-gray-700 mb-1">Degree Earned</label>
                     <input
                       type="text"
                       name="degree"
@@ -286,11 +254,11 @@ export default function Join() {
                       required
                       value={formData.degree}
                       onChange={handleChange}
-                      className="w-full border border-gray-300 rounded-md px-3 py-2 outline-none focus:ring-2 focus:ring-primary"
+                      className="w-full border border-gray-300 bg-white text-[#07131D] placeholder:text-gray-400 font-medium rounded-lg px-3.5 py-2.5 outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold text-gray-600 mb-1">Major / Stream</label>
+                    <label className="block text-xs font-semibold text-gray-700 mb-1">Major / Stream</label>
                     <input
                       type="text"
                       name="major"
@@ -298,7 +266,7 @@ export default function Join() {
                       required
                       value={formData.major}
                       onChange={handleChange}
-                      className="w-full border border-gray-300 rounded-md px-3 py-2 outline-none focus:ring-2 focus:ring-primary"
+                      className="w-full border border-gray-300 bg-white text-[#07131D] placeholder:text-gray-400 font-medium rounded-lg px-3.5 py-2.5 outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                     />
                   </div>
                 </div>
@@ -312,34 +280,34 @@ export default function Join() {
                     <span>Professional Details</span>
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold text-gray-600 mb-1">Job Title</label>
+                    <label className="block text-xs font-semibold text-gray-700 mb-1">Job Title</label>
                     <input
                       type="text"
                       name="job_title"
                       placeholder="e.g. Software Engineer, Doctor"
                       value={formData.job_title}
                       onChange={handleChange}
-                      className="w-full border border-gray-300 rounded-md px-3 py-2 outline-none focus:ring-2 focus:ring-primary"
+                      className="w-full border border-gray-300 bg-white text-[#07131D] placeholder:text-gray-400 font-medium rounded-lg px-3.5 py-2.5 outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold text-gray-600 mb-1">Company / Organization</label>
+                    <label className="block text-xs font-semibold text-gray-700 mb-1">Company / Organization</label>
                     <input
                       type="text"
                       name="company"
                       placeholder="e.g. Google, City Hospital"
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full border border-gray-300 rounded-md px-3 py-2 outline-none focus:ring-2 focus:ring-primary"
+                      className="w-full border border-gray-300 bg-white text-[#07131D] placeholder:text-gray-400 font-medium rounded-lg px-3.5 py-2.5 outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold text-gray-600 mb-2">Profile Picture (Drag & Drop or Click to Select)</label>
+                    <label className="block text-xs font-semibold text-gray-700 mb-2">Profile Picture (Drag & Drop or Click to Select)</label>
                     <label
                       htmlFor="avatar-upload"
                       onDragOver={handleDragOver}
                       onDrop={handleDrop}
-                      className="mt-1 flex flex-col justify-center items-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md bg-gray-50 hover:bg-gray-100 transition-colors cursor-pointer block"
+                      className="mt-1 flex flex-col justify-center items-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors cursor-pointer block"
                     >
                       {formData.avatar_url ? (
                         <div className="text-center space-y-2 pointer-events-none">
@@ -371,7 +339,7 @@ export default function Join() {
                   <button
                     onClick={handlePrev}
                     type="button"
-                    className="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
+                    className="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50"
                   >
                     <ChevronLeft className="h-4 w-4 mr-1" />
                     <span>Back</span>
@@ -382,7 +350,7 @@ export default function Join() {
                 <button
                   type="submit"
                   disabled={loading || uploading}
-                  className="inline-flex items-center px-5 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-primary-dark shadow-sm"
+                  className="inline-flex items-center px-6 py-2.5 border border-transparent text-sm font-semibold rounded-lg text-white bg-primary hover:bg-primary-dark shadow-sm"
                 >
                   {loading ? (
                     <span className="animate-pulse">Loading...</span>
