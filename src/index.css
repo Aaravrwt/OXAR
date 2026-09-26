@@ -54,10 +54,24 @@ body {
 }
 
 input, textarea, select {
-  color: #07131D;
+  color: #07131D !important;
+  -webkit-text-fill-color: #07131D !important;
 }
 
 input::placeholder, textarea::placeholder {
-  color: #9CA3AF;
+  color: #6B7280 !important;
+  -webkit-text-fill-color: #6B7280 !important;
+  opacity: 1 !important;
 }
+
+/* Fix iOS / Safari / Chrome Autofill and input text styling */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: #07131D !important;
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+  box-shadow: 0 0 0px 1000px #ffffff inset !important;
+}
+
 
