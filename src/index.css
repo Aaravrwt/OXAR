@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand Tokens - Luxury Editorial */
+  --color-oxar-midnight: #07131D;
+  --color-oxar-navy: #0D1D2A;
+  --color-oxar-black: #03080D;
+  
+  --color-oxar-ivory: #F5F0E7;
+  --color-oxar-ivory-dark: #EAE3D7;
+  --color-oxar-ivory-light: #FCFAF6;
+  
+  --color-oxar-gold: #C9A35B;
+  --color-oxar-gold-light: #E2C98D;
+  --color-oxar-gold-deep: #8F6A32;
+
+  /* Classic aliases */
+  --color-primary: #07131D;
+  --color-primary-dark: #03080D;
+  --color-secondary: #C9A35B;
+  --color-secondary-dark: #8F6A32;
+
+  --font-serif: "Times New Roman", Times, serif;
+  --font-sans: "Times New Roman", Times, serif;
+  --font-heading: "Times New Roman", Times, serif;
+  --font-body: "Times New Roman", Times, serif;
+}
+
+:root {
+  font-family: "Times New Roman", Times, serif;
+  background-color: #07131D;
+  color: #F5F0E7;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Times New Roman", Times, serif;
+  background-color: #07131D;
+  color: #F5F0E7;
+  overflow-x: hidden;
+}
+
+*, ::before, ::after {
+  font-family: "Times New Roman", Times, serif !important;
+}
+
+.font-editorial {
+  font-family: "Times New Roman", Times, serif !important;
+}
+
+.font-ui {
+  font-family: "Times New Roman", Times, serif !important;
+}
