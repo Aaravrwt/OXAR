@@ -51,15 +51,15 @@ export default function About() {
             <h2 className="font-heading font-bold text-3xl text-primary">OXAR History Timeline</h2>
             <p className="font-body text-gray-500 mt-2">Key milestones and history of our organization</p>
           </div>
-          <div className="relative border-l border-primary/20 ml-4 md:ml-32">
+          <div className="relative border-l-2 border-[#C9A35B]/40 ml-6 sm:ml-12 md:ml-28 pl-4 sm:pl-6">
             {timelineEvents.map((evt, idx) => (
-              <div key={idx} className="mb-10 ml-6 relative">
-                <span className="absolute -left-[31px] top-1 bg-white border-2 border-primary text-primary font-bold text-sm rounded-full w-12 h-6 flex items-center justify-center shadow-sm">
+              <div key={idx} className="mb-10 relative">
+                <span className="absolute -left-[35px] sm:-left-[43px] top-0 bg-[#07131D] border-2 border-[#C9A35B] text-[#C9A35B] font-bold text-xs sm:text-sm rounded-full px-2 py-0.5 sm:px-2.5 sm:py-1 flex items-center justify-center shadow-md">
                   {evt.year}
                 </span>
-                <div className="bg-white border border-[#E0E0E0] rounded-lg p-6 shadow-sm max-w-2xl ml-4">
-                  <h3 className="font-heading font-bold text-lg text-primary mb-1">{evt.title}</h3>
-                  <p className="font-body text-sm text-gray-600 leading-relaxed">{evt.description}</p>
+                <div className="bg-white border border-[#E0E0E0] rounded-lg p-5 sm:p-6 shadow-sm max-w-2xl ml-2 sm:ml-4">
+                  <h3 className="font-heading font-bold text-base sm:text-lg text-primary mb-1">{evt.title}</h3>
+                  <p className="font-body text-xs sm:text-sm text-gray-600 leading-relaxed">{evt.description}</p>
                 </div>
               </div>
             ))}

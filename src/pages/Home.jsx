@@ -259,7 +259,7 @@ export default function Home() {
       {/* =====================================================
           01 — CINEMATIC HERO
           ===================================================== */}
-      <section className="relative min-h-[92vh] flex flex-col justify-between overflow-hidden bg-[#07131D] px-6 pt-24 pb-16 sm:px-10 lg:px-16 border-b border-[#0D1D2A]">
+      <section className="relative min-h-[90vh] sm:min-h-[92vh] flex flex-col justify-between overflow-hidden bg-[#07131D] px-4 pt-20 pb-12 sm:px-10 lg:px-16 sm:pt-24 sm:pb-16 border-b border-[#0D1D2A]">
         
         {/* Background Atmosphere */}
         <div
@@ -274,17 +274,17 @@ export default function Home() {
         <div className="absolute inset-0 bg-radial-gradient from-transparent via-[#07131D]/60 to-[#07131D] pointer-events-none" />
 
         {/* Hero Central Content */}
-        <div className="relative z-10 max-w-5xl mx-auto w-full my-auto text-center pt-8 sm:pt-12">
+        <div className="relative z-10 max-w-5xl mx-auto w-full my-auto text-center pt-6 sm:pt-12">
           
           {/* Eyebrow */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-            className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full border border-[#C9A35B]/25 bg-[#0D1D2A]/60 backdrop-blur-md"
+            className="inline-flex items-center gap-2 mb-4 sm:mb-6 px-3.5 py-1.5 rounded-full border border-[#C9A35B]/25 bg-[#0D1D2A]/60 backdrop-blur-md"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-[#C9A35B]" />
-            <span className="font-ui text-xs font-semibold uppercase tracking-[0.3em] text-[#C9A35B]">
+            <span className="font-ui text-[10px] sm:text-xs font-semibold uppercase tracking-[0.25em] sm:tracking-[0.3em] text-[#C9A35B]">
               A Lifetime of Brotherhood
             </span>
           </motion.div>
@@ -294,7 +294,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2, ease: 'easeOut' }}
-            className="font-editorial text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-normal leading-[0.95] tracking-tight text-[#F5F0E7]"
+            className="font-editorial text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-normal leading-[1.05] sm:leading-[0.95] tracking-tight text-[#F5F0E7]"
           >
             <span className="block text-[#F5F0E7]">Once a Xaverian,</span>
             <span className="block text-[#C9A35B] italic font-light">Always a Xaverian.</span>
@@ -305,7 +305,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4, ease: 'easeOut' }}
-            className="mt-8 font-ui text-base sm:text-lg md:text-xl text-[#F5F0E7]/80 max-w-2xl mx-auto font-light leading-relaxed"
+            className="mt-6 sm:mt-8 font-ui text-sm sm:text-lg md:text-xl text-[#F5F0E7]/80 max-w-2xl mx-auto font-light leading-relaxed px-2 sm:px-0"
           >
             Connecting generations of Xaverians worldwide.
             Honoring our foundational values, inspiring community leadership, and building a lasting legacy.
@@ -316,11 +316,11 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6, ease: 'easeOut' }}
-            className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6"
+            className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-6 w-full max-w-md sm:max-w-none mx-auto"
           >
             <Link
               to="/join"
-              className="group relative inline-flex items-center justify-center px-8 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-[#07131D] bg-[#C9A35B] transition-all duration-300 hover:bg-[#E2C98D] shadow-lg shadow-[#C9A35B]/10 hover:shadow-[#C9A35B]/25"
+              className="w-full sm:w-auto group relative inline-flex items-center justify-center px-7 sm:px-8 py-3.5 sm:py-4 text-xs font-semibold uppercase tracking-[0.22em] sm:tracking-[0.25em] text-[#07131D] bg-[#C9A35B] transition-all duration-300 hover:bg-[#E2C98D] shadow-lg shadow-[#C9A35B]/10 hover:shadow-[#C9A35B]/25"
             >
               <span>Join Our Community</span>
               <ArrowRight className="ml-3 h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
@@ -328,7 +328,7 @@ export default function Home() {
 
             <Link
               to="/about"
-              className="inline-flex items-center justify-center px-8 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-[#F5F0E7] border border-[#F5F0E7]/20 hover:border-[#C9A35B]/60 hover:text-[#C9A35B] transition-all duration-300 backdrop-blur-sm"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-7 sm:px-8 py-3.5 sm:py-4 text-xs font-semibold uppercase tracking-[0.22em] sm:tracking-[0.25em] text-[#F5F0E7] border border-[#F5F0E7]/20 hover:border-[#C9A35B]/60 hover:text-[#C9A35B] transition-all duration-300 backdrop-blur-sm"
             >
               <span>Explore Our Legacy</span>
             </Link>
@@ -341,31 +341,31 @@ export default function Home() {
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.8, ease: 'easeOut' }}
-          className="relative z-10 w-full max-w-6xl mx-auto mt-12 pt-8 border-t border-[#0D1D2A] grid grid-cols-2 md:grid-cols-4 gap-6 text-center"
+          className="relative z-10 w-full max-w-6xl mx-auto mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-[#0D1D2A] grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-center"
         >
-          <div>
-            <span className="block font-editorial text-3xl sm:text-4xl text-[#C9A35B]">
+          <div className="p-2">
+            <span className="block font-editorial text-2xl sm:text-4xl text-[#C9A35B]">
               <AnimatedCounter end={5000} suffix="+" />
             </span>
-            <span className="font-ui text-[11px] uppercase tracking-[0.2em] text-[#F5F0E7]/60">Alumni Worldwide</span>
+            <span className="font-ui text-[10px] sm:text-[11px] uppercase tracking-[0.16em] sm:tracking-[0.2em] text-[#F5F0E7]/60">Alumni Worldwide</span>
           </div>
-          <div>
-            <span className="block font-editorial text-3xl sm:text-4xl text-[#C9A35B]">
+          <div className="p-2">
+            <span className="block font-editorial text-2xl sm:text-4xl text-[#C9A35B]">
               <AnimatedCounter end={50} suffix="+" />
             </span>
-            <span className="font-ui text-[11px] uppercase tracking-[0.2em] text-[#F5F0E7]/60">Years of Legacy</span>
+            <span className="font-ui text-[10px] sm:text-[11px] uppercase tracking-[0.16em] sm:tracking-[0.2em] text-[#F5F0E7]/60">Years of Legacy</span>
           </div>
-          <div>
-            <span className="block font-editorial text-3xl sm:text-4xl text-[#C9A35B]">
+          <div className="p-2">
+            <span className="block font-editorial text-2xl sm:text-4xl text-[#C9A35B]">
               <AnimatedCounter end={25} suffix="+" />
             </span>
-            <span className="font-ui text-[11px] uppercase tracking-[0.2em] text-[#F5F0E7]/60">Chapters & Initiatives</span>
+            <span className="font-ui text-[10px] sm:text-[11px] uppercase tracking-[0.16em] sm:tracking-[0.2em] text-[#F5F0E7]/60">Chapters & Hubs</span>
           </div>
-          <div>
-            <span className="block font-editorial text-3xl sm:text-4xl text-[#C9A35B]">
+          <div className="p-2">
+            <span className="block font-editorial text-2xl sm:text-4xl text-[#C9A35B]">
               <AnimatedCounter end={18} suffix="+" />
             </span>
-            <span className="font-ui text-[11px] uppercase tracking-[0.2em] text-[#F5F0E7]/60">Countries Represented</span>
+            <span className="font-ui text-[10px] sm:text-[11px] uppercase tracking-[0.16em] sm:tracking-[0.2em] text-[#F5F0E7]/60">Countries Represented</span>
           </div>
         </motion.div>
 
@@ -375,36 +375,36 @@ export default function Home() {
       {/* =====================================================
           02 — OUR LEGACY (WARM IVORY EDITORIAL SPREAD)
           ===================================================== */}
-      <section className="relative bg-[#F5F0E7] text-[#07131D] px-6 py-24 sm:px-10 lg:px-16 overflow-hidden">
+      <section className="relative bg-[#F5F0E7] text-[#07131D] px-4 py-16 sm:px-10 lg:px-16 sm:py-24 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
             
             {/* Left Editorial Narrative */}
             <div className="lg:col-span-6 flex flex-col justify-center">
-              <span className="font-ui text-xs font-bold uppercase tracking-[0.3em] text-[#8F6A32]">
+              <span className="font-ui text-[10px] sm:text-xs font-bold uppercase tracking-[0.25em] sm:tracking-[0.3em] text-[#8F6A32]">
                 Our Legacy
               </span>
 
-              <h2 className="mt-3 font-editorial text-4xl sm:text-5xl lg:text-6xl font-normal leading-[1.05] tracking-tight text-[#07131D]">
+              <h2 className="mt-2 sm:mt-3 font-editorial text-3xl sm:text-5xl lg:text-6xl font-normal leading-[1.1] sm:leading-[1.05] tracking-tight text-[#07131D]">
                 Rooted in Values.<br />
                 <span className="italic font-light text-[#8F6A32]">Built for a Better World.</span>
               </h2>
 
-              <div className="w-16 h-[1.5px] bg-[#C9A35B] my-8" />
+              <div className="w-16 h-[1.5px] bg-[#C9A35B] my-6 sm:my-8" />
 
-              <p className="font-ui text-base sm:text-lg leading-relaxed text-[#07131D]/80 font-normal">
+              <p className="font-ui text-sm sm:text-lg leading-relaxed text-[#07131D]/80 font-normal">
                 Founded on the enduring Jesuit tradition of selfless leadership and moral excellence, St. Xavier’s Senior Secondary School, Rohini has nurtured minds that shape nations, pioneer industries, and uplift communities.
               </p>
 
-              <p className="mt-4 font-ui text-sm sm:text-base leading-relaxed text-[#07131D]/70 font-light">
+              <p className="mt-3 sm:mt-4 font-ui text-xs sm:text-base leading-relaxed text-[#07131D]/70 font-light">
                 OXAR exists to ensure that the sacred bond forged within our classrooms, assembly halls, and playing fields remains unbreakable across decades and borders.
               </p>
 
-              <div className="mt-8 pt-6 border-t border-[#EAE3D7] flex items-center justify-between">
+              <div className="mt-6 sm:mt-8 pt-6 border-t border-[#EAE3D7] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                 <div>
-                  <span className="font-editorial text-2xl text-[#07131D] block">Est. 1974</span>
-                  <span className="font-ui text-xs uppercase tracking-widest text-[#07131D]/60">Five Decades of Distinction</span>
+                  <span className="font-editorial text-xl sm:text-2xl text-[#07131D] block">Est. 1974</span>
+                  <span className="font-ui text-[11px] sm:text-xs uppercase tracking-widest text-[#07131D]/60">Five Decades of Distinction</span>
                 </div>
 
                 <Link
@@ -418,15 +418,15 @@ export default function Home() {
             </div>
 
             {/* Right Asymmetrical Archival Layout */}
-            <div className="lg:col-span-6 relative">
-              <div className="relative z-10 overflow-hidden rounded-sm border border-[#EAE3D7] shadow-2xl bg-white p-3">
+            <div className="lg:col-span-6 relative mt-4 lg:mt-0">
+              <div className="relative z-10 overflow-hidden rounded-sm border border-[#EAE3D7] shadow-xl bg-white p-2.5 sm:p-3">
                 <img
                   src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=900&auto=format&fit=crop&q=80"
                   alt="Historic Xavierian Campus"
-                  className="w-full h-[380px] sm:h-[460px] object-cover filter saturate-[0.85] contrast-[1.05]"
+                  className="w-full h-[260px] sm:h-[460px] object-cover filter saturate-[0.85] contrast-[1.05]"
                 />
-                <div className="pt-3 pb-1 px-2 flex justify-between items-center text-xs font-ui text-[#07131D]/60 uppercase tracking-widest">
-                  <span>Archival Record • Campus Heritage</span>
+                <div className="pt-3 pb-1 px-1 sm:px-2 flex justify-between items-center text-[10px] sm:text-xs font-ui text-[#07131D]/60 uppercase tracking-wider sm:tracking-widest">
+                  <span>Archival Record • Heritage</span>
                   <span>St. Xavier's Rohini</span>
                 </div>
               </div>
@@ -451,34 +451,34 @@ export default function Home() {
       {/* =====================================================
           03 — GLOBAL XAVERIAN COMMUNITY
           ===================================================== */}
-      <section className="relative bg-[#07131D] text-[#F5F0E7] px-6 py-24 sm:px-10 lg:px-16 border-t border-[#0D1D2A]">
+      <section className="relative bg-[#07131D] text-[#F5F0E7] px-4 py-16 sm:px-10 lg:px-16 sm:py-24 border-t border-[#0D1D2A]">
         <div className="max-w-7xl mx-auto">
           
           {/* Header */}
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="font-ui text-xs font-bold uppercase tracking-[0.3em] text-[#C9A35B]">
+          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+            <span className="font-ui text-[10px] sm:text-xs font-bold uppercase tracking-[0.25em] sm:tracking-[0.3em] text-[#C9A35B]">
               Global Presence
             </span>
-            <h2 className="mt-3 font-editorial text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-[#F5F0E7]">
+            <h2 className="mt-2 sm:mt-3 font-editorial text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-[#F5F0E7]">
               Xaverians Everywhere.
             </h2>
-            <p className="mt-4 font-ui text-base text-[#F5F0E7]/70 font-light max-w-xl mx-auto">
+            <p className="mt-3 sm:mt-4 font-ui text-sm sm:text-base text-[#F5F0E7]/70 font-light max-w-xl mx-auto">
               A community that carries the Xaverian spirit across generations, cities, and continents.
             </p>
           </div>
 
           {/* Interactive Regional Hubs Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start">
             
             {/* Hub Selector List */}
-            <div className="lg:col-span-5 flex flex-col gap-3">
+            <div className="lg:col-span-5 flex flex-col gap-2.5 sm:gap-3">
               {Object.entries(regionalHubs).map(([key, hub]) => {
                 const isActive = activeRegion === key
                 return (
                   <button
                     key={key}
                     onClick={() => setActiveRegion(key)}
-                    className={`text-left p-5 transition-all duration-300 border flex items-center justify-between ${
+                    className={`text-left p-4 sm:p-5 transition-all duration-300 border flex items-center justify-between ${
                       isActive
                         ? 'bg-[#0D1D2A] border-[#C9A35B]/60 text-[#F5F0E7] shadow-lg shadow-[#07131D]'
                         : 'bg-[#07131D]/50 border-[#0D1D2A] text-[#F5F0E7]/60 hover:border-[#F5F0E7]/20 hover:text-[#F5F0E7]'
@@ -487,57 +487,57 @@ export default function Home() {
                     <div>
                       <div className="flex items-center gap-2">
                         <span className={`w-2 h-2 rounded-full ${isActive ? 'bg-[#C9A35B]' : 'bg-[#F5F0E7]/30'}`} />
-                        <span className="font-editorial text-xl font-medium tracking-wide text-[#F5F0E7]">{hub.name}</span>
+                        <span className="font-editorial text-lg sm:text-xl font-medium tracking-wide text-[#F5F0E7]">{hub.name}</span>
                       </div>
-                      <span className="font-ui text-xs uppercase tracking-wider text-[#F5F0E7]/50 mt-1 block pl-4">
+                      <span className="font-ui text-[11px] sm:text-xs uppercase tracking-wider text-[#F5F0E7]/50 mt-1 block pl-4">
                         {hub.country}
                       </span>
                     </div>
 
-                    <span className="font-editorial text-lg text-[#C9A35B] pl-4">{hub.alumni}</span>
+                    <span className="font-editorial text-base sm:text-lg text-[#C9A35B] pl-2">{hub.alumni}</span>
                   </button>
                 )
               })}
             </div>
 
             {/* Hub Spotlight Panel */}
-            <div className="lg:col-span-7 bg-[#0D1D2A] border border-[#C9A35B]/30 p-8 sm:p-10 relative overflow-hidden">
+            <div className="lg:col-span-7 bg-[#0D1D2A] border border-[#C9A35B]/30 p-6 sm:p-10 relative overflow-hidden">
               <div className="relative z-10">
-                <div className="flex items-center justify-between pb-6 border-b border-[#F5F0E7]/10">
+                <div className="flex items-center justify-between pb-4 sm:pb-6 border-b border-[#F5F0E7]/10 gap-3">
                   <div>
-                    <span className="font-ui text-[11px] uppercase tracking-[0.25em] text-[#C9A35B]">
+                    <span className="font-ui text-[10px] sm:text-[11px] uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[#C9A35B]">
                       {regionalHubs[activeRegion].status}
                     </span>
-                    <h3 className="font-editorial text-3xl sm:text-4xl text-[#F5F0E7] mt-1">
+                    <h3 className="font-editorial text-2xl sm:text-4xl text-[#F5F0E7] mt-1">
                       {regionalHubs[activeRegion].name}
                     </h3>
                   </div>
-                  <Globe className="w-8 h-8 text-[#C9A35B]/60" />
+                  <Globe className="w-6 h-6 sm:w-8 sm:h-8 text-[#C9A35B]/60 shrink-0" />
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 my-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 my-6 sm:my-8">
                   <div className="p-4 bg-[#07131D]/80 border border-[#0D1D2A]">
                     <span className="font-ui text-[10px] uppercase tracking-wider text-[#F5F0E7]/50 block">Alumni Registered</span>
-                    <span className="font-editorial text-3xl text-[#C9A35B] mt-1 block">
+                    <span className="font-editorial text-2xl sm:text-3xl text-[#C9A35B] mt-1 block">
                       {regionalHubs[activeRegion].alumni}
                     </span>
                   </div>
                   <div className="p-4 bg-[#07131D]/80 border border-[#0D1D2A]">
                     <span className="font-ui text-[10px] uppercase tracking-wider text-[#F5F0E7]/50 block">Regional Leadership</span>
-                    <span className="font-ui text-sm font-medium text-[#F5F0E7] mt-2 block">
+                    <span className="font-ui text-xs sm:text-sm font-medium text-[#F5F0E7] mt-2 block">
                       {regionalHubs[activeRegion].lead}
                     </span>
                   </div>
                 </div>
 
                 <div className="mt-4">
-                  <span className="font-ui text-xs uppercase tracking-wider text-[#F5F0E7]/60 block mb-2">Key Initiatives</span>
-                  <p className="font-ui text-sm text-[#F5F0E7]/90 leading-relaxed font-light">
+                  <span className="font-ui text-[11px] sm:text-xs uppercase tracking-wider text-[#F5F0E7]/60 block mb-2">Key Initiatives</span>
+                  <p className="font-ui text-xs sm:text-sm text-[#F5F0E7]/90 leading-relaxed font-light">
                     {regionalHubs[activeRegion].focus}
                   </p>
                 </div>
 
-                <div className="mt-8 pt-6 border-t border-[#F5F0E7]/10 flex justify-between items-center">
+                <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-[#F5F0E7]/10 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
                   <span className="font-ui text-xs text-[#F5F0E7]/50">Connect with regional coordinators</span>
                   <Link
                     to="/coordinators"
@@ -559,15 +559,15 @@ export default function Home() {
       {/* =====================================================
           04 — UPCOMING EVENTS (EDITORIAL LUXURY CARDS)
           ===================================================== */}
-      <section className="relative bg-[#03080D] text-[#F5F0E7] px-6 py-24 sm:px-10 lg:px-16 border-t border-[#0D1D2A]">
+      <section className="relative bg-[#03080D] text-[#F5F0E7] px-4 py-16 sm:px-10 lg:px-16 sm:py-24 border-t border-[#0D1D2A]">
         <div className="max-w-7xl mx-auto">
           
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-16 gap-4 sm:gap-6">
             <div>
-              <span className="font-ui text-xs font-bold uppercase tracking-[0.3em] text-[#C9A35B]">
+              <span className="font-ui text-[10px] sm:text-xs font-bold uppercase tracking-[0.25em] sm:tracking-[0.3em] text-[#C9A35B]">
                 Convocations & Gatherings
               </span>
-              <h2 className="mt-3 font-editorial text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-[#F5F0E7]">
+              <h2 className="mt-2 sm:mt-3 font-editorial text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-[#F5F0E7]">
                 Reconnect. Relive.<br />
                 <span className="italic font-light text-[#C9A35B]">Create New Memories.</span>
               </h2>
@@ -575,21 +575,21 @@ export default function Home() {
 
             <Link
               to="/events"
-              className="inline-flex items-center gap-2 font-ui text-xs font-bold uppercase tracking-[0.2em] text-[#C9A35B] hover:text-[#E2C98D] pb-1 border-b border-[#C9A35B]/40 transition-colors"
+              className="inline-flex items-center gap-2 font-ui text-xs font-bold uppercase tracking-[0.2em] text-[#C9A35B] hover:text-[#E2C98D] pb-1 border-b border-[#C9A35B]/40 transition-colors self-start md:self-auto"
             >
               <span>View Full Calendar</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {flagshipEvents.map((evt) => (
               <div
                 key={evt.id}
                 className="group relative bg-[#07131D] border border-[#0D1D2A] overflow-hidden flex flex-col transition-all duration-300 hover:border-[#C9A35B]/50 hover:-translate-y-1.5 shadow-xl"
               >
                 {/* Event Cover Image */}
-                <div className="relative h-60 overflow-hidden">
+                <div className="relative h-52 sm:h-60 overflow-hidden">
                   <img
                     src={evt.image}
                     alt={evt.title}
@@ -601,9 +601,9 @@ export default function Home() {
                 </div>
 
                 {/* Event Details */}
-                <div className="p-6 flex-1 flex flex-col justify-between">
+                <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between">
                   <div>
-                    <div className="flex items-center gap-4 text-xs font-ui text-[#F5F0E7]/60 mb-3">
+                    <div className="flex items-center gap-3 sm:gap-4 text-[11px] sm:text-xs font-ui text-[#F5F0E7]/60 mb-3">
                       <span className="inline-flex items-center gap-1.5 text-[#C9A35B] font-medium">
                         <Calendar className="w-3.5 h-3.5" />
                         {evt.date}
@@ -615,17 +615,17 @@ export default function Home() {
                       </span>
                     </div>
 
-                    <h3 className="font-editorial text-2xl text-[#F5F0E7] font-medium leading-snug group-hover:text-[#C9A35B] transition-colors">
+                    <h3 className="font-editorial text-xl sm:text-2xl text-[#F5F0E7] font-medium leading-snug group-hover:text-[#C9A35B] transition-colors">
                       {evt.title}
                     </h3>
 
-                    <p className="mt-3 font-ui text-sm text-[#F5F0E7]/70 font-light line-clamp-3 leading-relaxed">
+                    <p className="mt-2.5 sm:mt-3 font-ui text-xs sm:text-sm text-[#F5F0E7]/70 font-light line-clamp-3 leading-relaxed">
                       {evt.summary}
                     </p>
                   </div>
 
-                  <div className="mt-6 pt-4 border-t border-[#0D1D2A] flex items-center justify-between">
-                    <span className="font-ui text-xs text-[#F5F0E7]/40 uppercase tracking-widest">
+                  <div className="mt-5 sm:mt-6 pt-4 border-t border-[#0D1D2A] flex items-center justify-between">
+                    <span className="font-ui text-[11px] sm:text-xs text-[#F5F0E7]/40 uppercase tracking-widest">
                       {evt.time}
                     </span>
                     <Link
@@ -648,42 +648,42 @@ export default function Home() {
       {/* =====================================================
           05 — ALUMNI DIRECTORY PREVIEW
           ===================================================== */}
-      <section className="relative bg-[#07131D] text-[#F5F0E7] px-6 py-24 sm:px-10 lg:px-16 border-t border-[#0D1D2A]">
+      <section className="relative bg-[#07131D] text-[#F5F0E7] px-4 py-16 sm:px-10 lg:px-16 sm:py-24 border-t border-[#0D1D2A]">
         <div className="max-w-7xl mx-auto">
           
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="font-ui text-xs font-bold uppercase tracking-[0.3em] text-[#C9A35B]">
+          <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+            <span className="font-ui text-[10px] sm:text-xs font-bold uppercase tracking-[0.25em] sm:tracking-[0.3em] text-[#C9A35B]">
               Directory
             </span>
-            <h2 className="mt-3 font-editorial text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-[#F5F0E7]">
+            <h2 className="mt-2 sm:mt-3 font-editorial text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-[#F5F0E7]">
               Find Fellow Xaverians.
             </h2>
-            <p className="mt-3 font-ui text-base text-[#F5F0E7]/70 font-light">
+            <p className="mt-3 font-ui text-sm sm:text-base text-[#F5F0E7]/70 font-light">
               Discover mentors, industry peers, batchmates, and global collaborators.
             </p>
 
             {/* Search Input Filter */}
-            <div className="mt-8 max-w-xl mx-auto relative">
+            <div className="mt-6 sm:mt-8 max-w-xl mx-auto relative">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#C9A35B]" />
               <input
                 type="text"
                 value={directorySearch}
                 onChange={(e) => setDirectorySearch(e.target.value)}
-                placeholder="Search alumni by name, role, city, or discipline..."
-                className="w-full bg-[#0D1D2A] border border-[#0D1D2A] focus:border-[#C9A35B] pl-11 pr-4 py-3.5 text-sm font-ui text-[#F5F0E7] placeholder-[#F5F0E7]/40 outline-none transition-all"
+                placeholder="Search alumni by name, role, city..."
+                className="w-full bg-[#0D1D2A] border border-[#0D1D2A] focus:border-[#C9A35B] pl-11 pr-4 py-3 sm:py-3.5 text-xs sm:text-sm font-ui text-[#F5F0E7] placeholder-[#F5F0E7]/40 outline-none transition-all"
               />
             </div>
           </div>
 
           {/* Directory Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mt-8 sm:mt-10">
             {filteredAlumni.map((alum) => (
               <div
                 key={alum.id}
-                className="group bg-[#0D1D2A]/60 border border-[#0D1D2A] p-5 flex flex-col justify-between transition-all duration-300 hover:border-[#C9A35B]/40 hover:bg-[#0D1D2A]"
+                className="group bg-[#0D1D2A]/60 border border-[#0D1D2A] p-4 sm:p-5 flex flex-col justify-between transition-all duration-300 hover:border-[#C9A35B]/40 hover:bg-[#0D1D2A]"
               >
                 <div>
-                  <div className="relative mb-4 overflow-hidden h-48 bg-[#07131D]">
+                  <div className="relative mb-3 sm:mb-4 overflow-hidden h-44 sm:h-48 bg-[#07131D]">
                     <img
                       src={alum.image}
                       alt={alum.name}
@@ -694,7 +694,7 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <h4 className="font-editorial text-2xl text-[#F5F0E7] font-medium leading-snug">
+                  <h4 className="font-editorial text-xl sm:text-2xl text-[#F5F0E7] font-medium leading-snug">
                     {alum.name}
                   </h4>
 
@@ -707,8 +707,8 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-[#07131D] flex items-center justify-between">
-                  <span className="font-ui text-[11px] text-[#F5F0E7]/40 uppercase tracking-widest">
+                <div className="mt-5 sm:mt-6 pt-3 sm:pt-4 border-t border-[#07131D] flex items-center justify-between">
+                  <span className="font-ui text-[10px] sm:text-[11px] text-[#F5F0E7]/40 uppercase tracking-widest">
                     Verified Alumnus
                   </span>
                   <Link
@@ -723,10 +723,10 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-10 sm:mt-12">
             <Link
               to="/directory"
-              className="inline-flex items-center gap-2 font-ui text-xs font-bold uppercase tracking-[0.25em] text-[#07131D] bg-[#F5F0E7] px-8 py-4 hover:bg-[#C9A35B] transition-colors shadow-lg"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 font-ui text-xs font-bold uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[#07131D] bg-[#F5F0E7] px-6 sm:px-8 py-3.5 sm:py-4 hover:bg-[#C9A35B] transition-colors shadow-lg"
             >
               <span>Explore Complete Alumni Directory</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -740,22 +740,22 @@ export default function Home() {
       {/* =====================================================
           06 — STORIES FROM OXAR (EDITORIAL MAGAZINE LAYOUT)
           ===================================================== */}
-      <section className="relative bg-[#F5F0E7] text-[#07131D] px-6 py-24 sm:px-10 lg:px-16 border-t border-[#EAE3D7]">
+      <section className="relative bg-[#F5F0E7] text-[#07131D] px-4 py-16 sm:px-10 lg:px-16 sm:py-24 border-t border-[#EAE3D7]">
         <div className="max-w-7xl mx-auto">
           
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-16 gap-4 sm:gap-6">
             <div>
-              <span className="font-ui text-xs font-bold uppercase tracking-[0.3em] text-[#8F6A32]">
+              <span className="font-ui text-[10px] sm:text-xs font-bold uppercase tracking-[0.25em] sm:tracking-[0.3em] text-[#8F6A32]">
                 Editorial Journal
               </span>
-              <h2 className="mt-3 font-editorial text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-[#07131D]">
+              <h2 className="mt-2 sm:mt-3 font-editorial text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-[#07131D]">
                 Stories from OXAR.
               </h2>
             </div>
 
             <Link
               to="/news"
-              className="inline-flex items-center gap-2 font-ui text-xs font-bold uppercase tracking-[0.2em] text-[#07131D] hover:text-[#8F6A32] pb-1 border-b border-[#07131D]/40 transition-colors"
+              className="inline-flex items-center gap-2 font-ui text-xs font-bold uppercase tracking-[0.2em] text-[#07131D] hover:text-[#8F6A32] pb-1 border-b border-[#07131D]/40 transition-colors self-start md:self-auto"
             >
               <span>Browse All Dispatches</span>
               <ArrowRight className="w-3.5 h-3.5 text-[#8F6A32]" />
@@ -763,12 +763,12 @@ export default function Home() {
           </div>
 
           {/* Magazine Asymmetrical Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8">
             
             {/* Primary Feature Story (7 cols) */}
             {recentNews[0] && (
               <div className="lg:col-span-7 bg-white border border-[#EAE3D7] overflow-hidden flex flex-col justify-between group shadow-sm hover:shadow-md transition-shadow">
-                <div className="relative h-72 sm:h-96 overflow-hidden">
+                <div className="relative h-56 sm:h-80 md:h-96 overflow-hidden">
                   <img
                     src={recentNews[0].thumbnail_url}
                     alt={recentNews[0].title}
@@ -779,20 +779,20 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="p-8 flex-1 flex flex-col justify-between">
+                <div className="p-5 sm:p-8 flex-1 flex flex-col justify-between">
                   <div>
-                    <span className="font-ui text-xs uppercase tracking-wider text-[#07131D]/50 block mb-2">
+                    <span className="font-ui text-[11px] sm:text-xs uppercase tracking-wider text-[#07131D]/50 block mb-2">
                       {recentNews[0].created_at} • Featured Dispatch
                     </span>
-                    <h3 className="font-editorial text-3xl sm:text-4xl text-[#07131D] font-normal leading-tight group-hover:text-[#8F6A32] transition-colors">
+                    <h3 className="font-editorial text-2xl sm:text-4xl text-[#07131D] font-normal leading-tight group-hover:text-[#8F6A32] transition-colors">
                       {recentNews[0].title}
                     </h3>
-                    <p className="mt-4 font-ui text-sm sm:text-base text-[#07131D]/75 leading-relaxed font-light">
+                    <p className="mt-3 sm:mt-4 font-ui text-xs sm:text-base text-[#07131D]/75 leading-relaxed font-light">
                       {recentNews[0].excerpt}
                     </p>
                   </div>
 
-                  <div className="mt-8 pt-4 border-t border-[#EAE3D7] flex items-center justify-between">
+                  <div className="mt-6 sm:mt-8 pt-4 border-t border-[#EAE3D7] flex items-center justify-between">
                     <span className="font-ui text-xs font-medium text-[#07131D]/60 uppercase tracking-widest">
                       OXAR Archive
                     </span>
@@ -809,17 +809,17 @@ export default function Home() {
             )}
 
             {/* Secondary Stories Stack (5 cols) */}
-            <div className="lg:col-span-5 flex flex-col gap-8">
+            <div className="lg:col-span-5 flex flex-col gap-6 sm:gap-8">
               {recentNews.slice(1, 3).map((item) => (
                 <div
                   key={item.id}
-                  className="bg-white border border-[#EAE3D7] p-6 flex flex-col justify-between group shadow-sm hover:shadow-md transition-shadow flex-1"
+                  className="bg-white border border-[#EAE3D7] p-5 sm:p-6 flex flex-col justify-between group shadow-sm hover:shadow-md transition-shadow flex-1"
                 >
                   <div>
                     <span className="font-ui text-[10px] uppercase tracking-widest text-[#8F6A32] block mb-2 font-bold">
                       {item.category}
                     </span>
-                    <h4 className="font-editorial text-2xl text-[#07131D] font-normal leading-snug group-hover:text-[#8F6A32] transition-colors">
+                    <h4 className="font-editorial text-xl sm:text-2xl text-[#07131D] font-normal leading-snug group-hover:text-[#8F6A32] transition-colors">
                       {item.title}
                     </h4>
                     <p className="mt-2 font-ui text-xs sm:text-sm text-[#07131D]/70 font-light line-clamp-3 leading-relaxed">
@@ -827,7 +827,7 @@ export default function Home() {
                     </p>
                   </div>
 
-                  <div className="mt-6 pt-3 border-t border-[#EAE3D7] flex items-center justify-between text-xs font-ui">
+                  <div className="mt-5 sm:mt-6 pt-3 border-t border-[#EAE3D7] flex items-center justify-between text-xs font-ui">
                     <span className="text-[#07131D]/50">{item.created_at}</span>
                     <Link
                       to="/news"
@@ -850,7 +850,7 @@ export default function Home() {
       {/* =====================================================
           07 — PHILOSOPHY SECTION (CINEMATIC PAUSE)
           ===================================================== */}
-      <section className="relative bg-[#07131D] text-[#F5F0E7] px-6 py-32 sm:px-10 lg:px-16 overflow-hidden border-t border-[#0D1D2A] text-center">
+      <section className="relative bg-[#07131D] text-[#F5F0E7] px-4 py-20 sm:px-10 lg:px-16 sm:py-32 overflow-hidden border-t border-[#0D1D2A] text-center">
         
         {/* Subtle background crest / texture */}
         <div
@@ -861,17 +861,17 @@ export default function Home() {
         />
 
         <div className="relative z-10 max-w-4xl mx-auto">
-          <span className="w-8 h-[1px] bg-[#C9A35B] block mx-auto mb-8" />
+          <span className="w-8 h-[1px] bg-[#C9A35B] block mx-auto mb-6 sm:mb-8" />
           
-          <blockquote className="font-editorial text-3xl sm:text-5xl md:text-6xl font-light italic leading-tight text-[#F5F0E7]">
+          <blockquote className="font-editorial text-2xl sm:text-5xl md:text-6xl font-light italic leading-tight text-[#F5F0E7]">
             “Men and women for others.”
           </blockquote>
 
-          <cite className="block mt-6 font-ui text-xs uppercase tracking-[0.35em] text-[#C9A35B] not-italic font-semibold">
+          <cite className="block mt-4 sm:mt-6 font-ui text-[11px] sm:text-xs uppercase tracking-[0.3em] sm:tracking-[0.35em] text-[#C9A35B] not-italic font-semibold">
             — St. Ignatius of Loyola
           </cite>
 
-          <p className="mt-8 font-ui text-sm sm:text-base text-[#F5F0E7]/60 max-w-xl mx-auto font-light leading-relaxed">
+          <p className="mt-6 sm:mt-8 font-ui text-xs sm:text-base text-[#F5F0E7]/60 max-w-xl mx-auto font-light leading-relaxed">
             The foundational principle guiding every Xaverian’s journey: pursuing academic and professional distinction while serving society with humility and purpose.
           </p>
         </div>
@@ -881,25 +881,25 @@ export default function Home() {
       {/* =====================================================
           08 — JOIN OXAR (CALL TO ACTION)
           ===================================================== */}
-      <section className="relative bg-[#03080D] text-[#F5F0E7] px-6 py-28 sm:px-10 lg:px-16 border-t border-[#0D1D2A]">
+      <section className="relative bg-[#03080D] text-[#F5F0E7] px-4 py-16 sm:px-10 lg:px-16 sm:py-28 border-t border-[#0D1D2A]">
         <div className="max-w-5xl mx-auto text-center">
           
-          <span className="font-ui text-xs font-bold uppercase tracking-[0.35em] text-[#C9A35B]">
+          <span className="font-ui text-[10px] sm:text-xs font-bold uppercase tracking-[0.3em] sm:tracking-[0.35em] text-[#C9A35B]">
             Membership & Brotherhood
           </span>
 
-          <h2 className="mt-4 font-editorial text-4xl sm:text-6xl lg:text-7xl font-normal tracking-tight text-[#F5F0E7]">
+          <h2 className="mt-3 sm:mt-4 font-editorial text-3xl sm:text-6xl lg:text-7xl font-normal tracking-tight text-[#F5F0E7]">
             Be Part of Something Greater.
           </h2>
 
-          <p className="mt-6 font-ui text-base sm:text-lg text-[#F5F0E7]/70 font-light max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-4 sm:mt-6 font-ui text-sm sm:text-lg text-[#F5F0E7]/70 font-light max-w-2xl mx-auto leading-relaxed">
             Join thousands of Xaverians worldwide. Reclaim your alumni profile, connect with mentors across global industries, and contribute to the legacy of our school.
           </p>
 
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+          <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-6 w-full max-w-md sm:max-w-none mx-auto">
             <Link
               to="/join"
-              className="w-full sm:w-auto inline-flex items-center justify-center px-10 py-4 font-ui text-xs font-bold uppercase tracking-[0.25em] text-[#07131D] bg-[#C9A35B] hover:bg-[#E2C98D] transition-colors shadow-xl"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-8 sm:px-10 py-3.5 sm:py-4 font-ui text-xs font-bold uppercase tracking-[0.22em] sm:tracking-[0.25em] text-[#07131D] bg-[#C9A35B] hover:bg-[#E2C98D] transition-colors shadow-xl"
             >
               <span>Join OXAR Today</span>
               <ArrowRight className="ml-2 w-3.5 h-3.5" />
@@ -907,7 +907,7 @@ export default function Home() {
 
             <Link
               to="/about"
-              className="w-full sm:w-auto inline-flex items-center justify-center px-10 py-4 font-ui text-xs font-semibold uppercase tracking-[0.25em] text-[#F5F0E7] border border-[#F5F0E7]/25 hover:border-[#C9A35B] hover:text-[#C9A35B] transition-colors"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-8 sm:px-10 py-3.5 sm:py-4 font-ui text-xs font-semibold uppercase tracking-[0.22em] sm:tracking-[0.25em] text-[#F5F0E7] border border-[#F5F0E7]/25 hover:border-[#C9A35B] hover:text-[#C9A35B] transition-colors"
             >
               <span>Explore The Council</span>
             </Link>
@@ -920,20 +920,20 @@ export default function Home() {
       {/* =====================================================
           09 — LUXURY FOOTER
           ===================================================== */}
-      <footer className="bg-[#07131D] text-[#F5F0E7] border-t border-[#0D1D2A] px-6 py-16 sm:px-10 lg:px-16">
+      <footer className="bg-[#07131D] text-[#F5F0E7] border-t border-[#0D1D2A] px-4 py-12 sm:px-10 lg:px-16 sm:py-16">
         <div className="max-w-7xl mx-auto">
           
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 pb-12 border-b border-[#0D1D2A]">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 sm:gap-12 pb-10 sm:pb-12 border-b border-[#0D1D2A]">
             
             {/* Brand Tribute */}
             <div className="md:col-span-5">
-              <span className="font-editorial text-3xl tracking-tight text-[#F5F0E7] block font-normal">
+              <span className="font-editorial text-2xl sm:text-3xl tracking-tight text-[#F5F0E7] block font-normal">
                 OXAR
               </span>
-              <span className="font-ui text-xs uppercase tracking-[0.25em] text-[#C9A35B] block mt-1">
+              <span className="font-ui text-[11px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[#C9A35B] block mt-1">
                 Old Xaverians Alumni Rohini
               </span>
-              <p className="mt-4 font-ui text-xs sm:text-sm text-[#F5F0E7]/60 leading-relaxed font-light max-w-sm">
+              <p className="mt-3 sm:mt-4 font-ui text-xs sm:text-sm text-[#F5F0E7]/60 leading-relaxed font-light max-w-sm">
                 The official alumni association of St. Xavier's Senior Secondary School, Rohini, Delhi. Fostering lifelong brotherhood and service since 1974.
               </p>
             </div>
@@ -941,10 +941,10 @@ export default function Home() {
             {/* Navigation Links */}
             <div className="md:col-span-4 grid grid-cols-2 gap-6 text-xs font-ui">
               <div>
-                <span className="uppercase tracking-[0.2em] text-[#C9A35B] font-semibold block mb-4">
+                <span className="uppercase tracking-[0.2em] text-[#C9A35B] font-semibold block mb-3 sm:mb-4">
                   Navigation
                 </span>
-                <ul className="space-y-2.5 text-[#F5F0E7]/70 font-light">
+                <ul className="space-y-2 sm:space-y-2.5 text-[#F5F0E7]/70 font-light">
                   <li><Link to="/about" className="hover:text-[#C9A35B] transition-colors">About & Council</Link></li>
                   <li><Link to="/directory" className="hover:text-[#C9A35B] transition-colors">Alumni Directory</Link></li>
                   <li><Link to="/events" className="hover:text-[#C9A35B] transition-colors">Events & Calendar</Link></li>
@@ -953,10 +953,10 @@ export default function Home() {
               </div>
 
               <div>
-                <span className="uppercase tracking-[0.2em] text-[#C9A35B] font-semibold block mb-4">
+                <span className="uppercase tracking-[0.2em] text-[#C9A35B] font-semibold block mb-3 sm:mb-4">
                   Initiatives
                 </span>
-                <ul className="space-y-2.5 text-[#F5F0E7]/70 font-light">
+                <ul className="space-y-2 sm:space-y-2.5 text-[#F5F0E7]/70 font-light">
                   <li><Link to="/scholarships" className="hover:text-[#C9A35B] transition-colors">Scholarships</Link></li>
                   <li><Link to="/careers" className="hover:text-[#C9A35B] transition-colors">Careers & Mentorship</Link></li>
                   <li><Link to="/gallery" className="hover:text-[#C9A35B] transition-colors">Archival Gallery</Link></li>
@@ -967,7 +967,7 @@ export default function Home() {
 
             {/* Official Contact */}
             <div className="md:col-span-3 text-xs font-ui">
-              <span className="uppercase tracking-[0.2em] text-[#C9A35B] font-semibold block mb-4">
+              <span className="uppercase tracking-[0.2em] text-[#C9A35B] font-semibold block mb-3 sm:mb-4">
                 Official Inquiries
               </span>
               <p className="text-[#F5F0E7]/70 font-light mb-2">
@@ -993,9 +993,9 @@ export default function Home() {
           </div>
 
           {/* Copyright Row */}
-          <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs font-ui text-[#F5F0E7]/40 gap-4">
+          <div className="pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] sm:text-xs font-ui text-[#F5F0E7]/40 gap-3 sm:gap-4 text-center sm:text-left">
             <span>© {new Date().getFullYear()} Old Xaverians Alumni Rohini (OXAR). All rights reserved.</span>
-            <span className="font-editorial text-sm italic text-[#C9A35B]/80">
+            <span className="font-editorial text-xs sm:text-sm italic text-[#C9A35B]/80">
               “Once a Xaverian, Always a Xaverian.”
             </span>
           </div>
